@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Producten - Beslist Winkelwagen integratie</title>
+    <meta name="description" content="Verbind Prestashop met Beslist.nl en Beslist.be om orders en producten te synchroniseren." />
+    <meta name="author" content="Mark Wienk">
+    <meta charset="UTF-8">
+    <link rel="icon" href="../themes/daux/img/favicon-blue.png" type="image/x-icon">
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href='../themes/daux/css/theme.min.css' rel='stylesheet' type='text/css'><link href='../themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="with-float">
+    
+<div class="container-fluid fluid-height wrapper">
+    <div class="navbar navbar-static-top hidden-print">
+        <div class="container-fluid">
+            <a class="brand navbar-brand pull-left" href="../index.html">Beslist Winkelwagen integratie</a>
+
+        </div>
+    </div>
+    <div class="row columns content">
+        <div class="left-column article-tree col-sm-3 hidden-print">
+            <!-- For Mobile -->
+            <div class="responsive-collapse">
+                <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="sub-nav-collapse" class="sub-nav-collapse">
+                <!-- Navigation -->
+                <ul class='nav nav-list'><li class=''><a href="../Getting_Started.html">Getting Started</a></li><li class=' has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Configuratie</a><ul class='nav nav-list'><li class=''><a href="../Configuratie/Beslist.html">Beslist</a></li><li class=''><a href="../Configuratie/Module.html">Module</a></li></ul></li><li class=' has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Tests</a><ul class='nav nav-list'><li class=''><a href="../Tests/Orders.html">Orders</a></li><li class=''><a href="../Tests/Producten.html">Producten</a></li></ul></li><li class='open has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Gebruik</a><ul class='nav nav-list'><li class=''><a href="../Gebruik/Orders.html">Orders</a></li><li class='active'><a href="../Gebruik/Producten.html">Producten</a></li></ul></li></ul>
+
+                <div class="sidebar-links">
+                    
+                        <!-- Links -->
+                        <a href="http://addons.prestashop.com/en/22376-bolcom-plaza-api-connector.html" target="_blank">Aanschaffen</a><br><a href="https://addons.prestashop.com/en/customer-products.php" target="_blank">Download</a><br><a href="https://addons.prestashop.com/en/customer-support.php" target="_blank">Support/Bugs</a><br>
+                        <div id="toggleCodeBlock">
+                                                </div>
+
+                        <!-- Twitter -->
+                                                    <div class="twitter">
+                                <hr/>
+                                <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=mwienk&amp;show_count=false"></iframe>
+                            </div>
+                        
+                        <hr/>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right-column float-view content-area col-sm-9">
+
+            <div class="content-page">
+                
+                <div class="doc_content">
+                    <article>
+            <div class="page-header sub-header clearfix">
+            <h1><a href="../Gebruik/Orders.html">Gebruik</a> <i class="glyphicon glyphicon-chevron-right"></i> <a href="../Gebruik/Producten.html">Producten</a></h1>
+            <span style="float: left; font-size: 10px; color: gray;">
+                Monday, July 11, 2016            </span>
+            <span style="float: right; font-size: 10px; color: gray;">
+                12:01 PM            </span>
+        </div>
+    
+    <h3 id="page_Inhoud">Inhoud</h3>
+<ul class="TableOfContents">
+<li>
+<p><a href="#page_Inhoud">Inhoud</a></p>
+</li>
+<li>
+<p><a href="#page_Prestashop_producten_op_Beslist">Prestashop producten op Beslist</a></p>
+<ul class="TableOfContents">
+<li>
+<p><a href="#page_Producten_selecteren">Producten selecteren</a></p>
+</li>
+<li>
+<p><a href="#page_Producten_synchroniseren">Producten synchroniseren</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#page_Veelgestelde_vragen">Veelgestelde vragen</a></p>
+</li>
+</ul>
+<h2 id="page_Prestashop_producten_op_Beslist">Prestashop producten op Beslist</h2>
+<p>Na het installeren van de module zijn er nieuwe opties in het menu van Prestashop gekomen. Een daarvan is <code>Catalogus</code> -&gt; <code>Beslist.nl producten</code>. Wanneer u daar naartoe navigeert, ziet u een overzicht van alle producten in het systeem die op Beslist.nl gepubliceerd worden.</p>
+<p><img src="overview_products.png" alt="Beslist.nl producten" /></p>
+<h3 id="page_Producten_selecteren">Producten selecteren</h3>
+<p>Binnen Prestashop kunt u nu per product instellen hoe deze op Beslist.nl weergegeven dient te worden. Op de product bewerkpagina (onder <code>Catalogus</code>) vindt u een tab met de titel <code>Beslist.nl Winkelwagen integratie</code>. Op die tab staan de instellingen voor Beslist.nl.</p>
+<p><img src="overview_producttab.png" alt="Beslist.nl producttab" /></p>
+<p>Op deze tab ziet u voor alle productcombinaties een optie om deze te publiceren (via het vinkje onder <code>Publiceren</code>). Ook kunt u per combinatie een specifieke Beslist geadverteerde prijs instellen (in het veld <code>Specifieke prijs</code>). Klik voor een product aan dat deze op Beslist gepubliceerd moet worden.</p>
+<h3 id="page_Producten_synchroniseren">Producten synchroniseren</h3>
+<p>Wanneer er een nieuw product wordt geselecteerd voor Beslist, wordt deze pas na de volgende productfeed run meegenomen. Het duurt dus meestal een tijd voordat uw product pas zichtbaar is. Nadat het product zichtbaar is kunnen voorraad en prijsupdates wel snel verwerkt worden.</p>
+<p>De volgende statussen zijn mogelijk voor een Beslist publicatie:</p>
+<ul>
+<li>
+<code>OK</code> - Dit product is correct naar Beslist gemeld</li>
+<li>
+<code>Nieuw</code> - Dit product is nieuw en nog niet naar Beslist gemeld</li>
+<li>
+<code>Voorraad bijgewerkt</code> - Van dit product is de voorraad bijgewerkt, maar nog niet naar Beslist gemeld</li>
+<li>
+<code>Info bijgewerkt</code> - Van dit product is de informatie (bijv. de prijs) bijgewerkt, maar nog niet naar Beslist gemeld</li>
+</ul>
+<p>Als er in het productenoverzicht een andere status dan <code>OK</code> staat, kan via de knop <code>Synchroniseer producten</code> bovenin de synchronisatie handmatig worden gestart. Indien er foutmeldingen ontstaan tijdens de synchronisatie krijgt u een bericht. Wanneer de API onbeschikbaar is kunt u het later nog eens proberen, maar als er foutieve data gestuurd is, moet u de producten wellicht aanpassen.</p>
+<h2 id="page_Veelgestelde_vragen">Veelgestelde vragen</h2>
+<p><strong>Waarom krijg ik 404 meldingen als ik mijn product opsla?</strong></p>
+<p>Dit wordt veroorzaakt doordat het product nog niet bij Beslist bekend is. Beslist moet eerst de productfeed opnieuw inlezen. Dit gebeurt volgens een bepaald schema (op het moment van schrijven 1 maal daags om 8:00). Zie de <a href="https://cl.beslist.nl/pdf/Productfeed-handleiding%20voor%20Pro%20Shops%20NL.pdf">beslist handleidingen</a> voor meer informatie.</p>
+<p>De producten waar 404 meldingen voor komen, kunnen de dag erna via de knop <code>Synchroniseer producten</code> opnieuw aangeboden worden. Daarna blijft het goed gaan.</p>
+
+        <nav>
+        <ul class="pager">
+            <li><a href="../Gebruik/Orders.html">Previous</a></li>                    </ul>
+    </nav>
+    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36118513-4', '');
+    ga('send', 'pageview');
+</script>
+
+    <!-- jQuery -->
+    <script src="../themes/daux/js/jquery-1.11.3.min.js"></script>
+
+    <!-- hightlight.js -->
+    <script src="../themes/daux/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- JS -->
+    
+    <script src="../themes/daux/js/daux.js"></script>
+
+    
+</body>
+</html>

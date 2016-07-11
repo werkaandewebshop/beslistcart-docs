@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Orders - Beslist Winkelwagen integratie</title>
+    <meta name="description" content="Verbind Prestashop met Beslist.nl en Beslist.be om orders en producten te synchroniseren." />
+    <meta name="author" content="Mark Wienk">
+    <meta charset="UTF-8">
+    <link rel="icon" href="../themes/daux/img/favicon-blue.png" type="image/x-icon">
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href='../themes/daux/css/theme.min.css' rel='stylesheet' type='text/css'><link href='../themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="with-float">
+    
+<div class="container-fluid fluid-height wrapper">
+    <div class="navbar navbar-static-top hidden-print">
+        <div class="container-fluid">
+            <a class="brand navbar-brand pull-left" href="../index.html">Beslist Winkelwagen integratie</a>
+
+        </div>
+    </div>
+    <div class="row columns content">
+        <div class="left-column article-tree col-sm-3 hidden-print">
+            <!-- For Mobile -->
+            <div class="responsive-collapse">
+                <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="sub-nav-collapse" class="sub-nav-collapse">
+                <!-- Navigation -->
+                <ul class='nav nav-list'><li class=''><a href="../Getting_Started.html">Getting Started</a></li><li class=' has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Configuratie</a><ul class='nav nav-list'><li class=''><a href="../Configuratie/Beslist.html">Beslist</a></li><li class=''><a href="../Configuratie/Module.html">Module</a></li></ul></li><li class='open has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Tests</a><ul class='nav nav-list'><li class='active'><a href="../Tests/Orders.html">Orders</a></li><li class=''><a href="../Tests/Producten.html">Producten</a></li></ul></li><li class=' has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Gebruik</a><ul class='nav nav-list'><li class=''><a href="../Gebruik/Orders.html">Orders</a></li><li class=''><a href="../Gebruik/Producten.html">Producten</a></li></ul></li></ul>
+
+                <div class="sidebar-links">
+                    
+                        <!-- Links -->
+                        <a href="http://addons.prestashop.com/en/22376-bolcom-plaza-api-connector.html" target="_blank">Aanschaffen</a><br><a href="https://addons.prestashop.com/en/customer-products.php" target="_blank">Download</a><br><a href="https://addons.prestashop.com/en/customer-support.php" target="_blank">Support/Bugs</a><br>
+                        <div id="toggleCodeBlock">
+                                                </div>
+
+                        <!-- Twitter -->
+                                                    <div class="twitter">
+                                <hr/>
+                                <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=mwienk&amp;show_count=false"></iframe>
+                            </div>
+                        
+                        <hr/>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right-column float-view content-area col-sm-9">
+
+            <div class="content-page">
+                
+                <div class="doc_content">
+                    <article>
+            <div class="page-header sub-header clearfix">
+            <h1><a href="../Tests/Orders.html">Tests</a> <i class="glyphicon glyphicon-chevron-right"></i> <a href="../Tests/Orders.html">Orders</a></h1>
+            <span style="float: left; font-size: 10px; color: gray;">
+                Monday, July 11, 2016            </span>
+            <span style="float: right; font-size: 10px; color: gray;">
+                11:21 AM            </span>
+        </div>
+    
+    <p>De eerste test die uitgevoerd dient te worden is de orders synchronisatie.</p>
+<blockquote>
+<p>Kijk goed na of u de module in <a href="../Configuratie/Module.html">testmodus heeft geconfigureerd</a></p>
+</blockquote>
+<h2 id="page_Beslist_orders_in_Prestashop">Beslist orders in Prestashop</h2>
+<p>Na het installeren van de module zijn er nieuwe opties in het menu van Prestashop gekomen. Een daarvan is <code>Bestellingen</code> -&gt; <code>Beslist.nl orders</code>. Wanneer u daar naartoe navigeert, ziet u een overzicht van alle Beslist bestellingen in het systeem (zowel van Beslist.nl als Beslist.be).</p>
+<p><img src="../Gebruik/overview_orders.png" alt="Beslist.nl orders" /></p>
+<h3 id="page_Testproduct_aanmaken">Testproduct aanmaken</h3>
+<p>Om de test te kunnen gebruiken dient u eerst een product te hebben die correspondeert met het product dat Bol.com gaat melden. Hiervoor is het nodig om een product in Prestashop aan te maken (of tijdelijk een bestaand product te wijzigen).</p>
+<ol>
+<li>Maak een (tijdelijk) product, bijv. <code>Beslist testproduct</code>.</li>
+<li>Vul een naam voor het product in.</li>
+<li>Vul een referentiecode voor het product in.</li>
+<li>Vul bij de <code>EAN-13 of JAN-streepjescode</code> een geldige code in.</li>
+<li>Zorg ervoor dat het product op voorraad is (dus bestelbaar).</li>
+<li>Zet het product in een categorie.</li>
+<li>Sla het product op.</li>
+<li>Zet in de module instellingen de <code>Beslist productreferentie veld</code> goed (zie <a href="../Configuratie/Module.html">configuratie</a>).</li>
+</ol>
+<h3 id="page_Belgie_activeren">België activeren</h3>
+<p>Indien u alleen in Nederland levert, is het toch van belang om België heel tijdelijk aan te zetten. Dit i somdat de Order API willekeurige data terugstuurt. Soms dus een Nederlands adres, maar soms ook een Belgisch adres.</p>
+<h3 id="page_Orders_verkrijgen">Orders verkrijgen</h3>
+<p>Navigeer naar <code>Bestellingen</code> -&gt; <code>Beslist.nl orders</code>. Als het goed is ziet u bovenin 2 knoppen: <code>Synchroniseer bestellingen</code> en <code>Verwijder testdata</code>.</p>
+<blockquote>
+<p>Let op: Indien u <code>Verwijder testdata</code> niet ziet hebt u de module niet in testmodus staan! Ook moet u eerst een testproduct hebben aangemaakt, zie hierboven</p>
+</blockquote>
+<p>Klik bovenin op de knop <code>Synchroniseer bestellingen</code>. U ontvangt nu als het goed is een testorder van Beslist. Belangrijk is dat de verzendkosten kloppen. Klopt het totaalbedrag ook? De prijs van het product wijkt hoogstwaarschijnlijk af van uw prijs, maar het betaalde bedrag (en de verzendkosten) moeten kloppen.</p>
+<p><img src="../Gebruik/overview_order_reference.png" alt="Bol.com orders" /></p>
+<h3 id="page_Verwijder_testdata">Verwijder testdata</h3>
+<p>U kunt de orders verwijderen via de knop <code>Verwijder testdata</code>. De orders en alle verwante informatie (orderregels, klanten etc.) zullen worden verwijderd.</p>
+
+        <nav>
+        <ul class="pager">
+            <li><a href="../Configuratie/Module.html">Previous</a></li>            <li><a href="../Tests/Producten.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36118513-4', '');
+    ga('send', 'pageview');
+</script>
+
+    <!-- jQuery -->
+    <script src="../themes/daux/js/jquery-1.11.3.min.js"></script>
+
+    <!-- hightlight.js -->
+    <script src="../themes/daux/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- JS -->
+    
+    <script src="../themes/daux/js/daux.js"></script>
+
+    
+</body>
+</html>

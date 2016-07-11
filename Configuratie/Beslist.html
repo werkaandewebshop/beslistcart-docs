@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Beslist - Beslist Winkelwagen integratie</title>
+    <meta name="description" content="Verbind Prestashop met Beslist.nl en Beslist.be om orders en producten te synchroniseren." />
+    <meta name="author" content="Mark Wienk">
+    <meta charset="UTF-8">
+    <link rel="icon" href="../themes/daux/img/favicon-blue.png" type="image/x-icon">
+    <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link href='../themes/daux/css/theme.min.css' rel='stylesheet' type='text/css'><link href='../themes/daux/css/theme-blue.min.css' rel='stylesheet' type='text/css'>
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body class="with-float">
+    
+<div class="container-fluid fluid-height wrapper">
+    <div class="navbar navbar-static-top hidden-print">
+        <div class="container-fluid">
+            <a class="brand navbar-brand pull-left" href="../index.html">Beslist Winkelwagen integratie</a>
+
+        </div>
+    </div>
+    <div class="row columns content">
+        <div class="left-column article-tree col-sm-3 hidden-print">
+            <!-- For Mobile -->
+            <div class="responsive-collapse">
+                <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="sub-nav-collapse" class="sub-nav-collapse">
+                <!-- Navigation -->
+                <ul class='nav nav-list'><li class=''><a href="../Getting_Started.html">Getting Started</a></li><li class='open has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Configuratie</a><ul class='nav nav-list'><li class='active'><a href="../Configuratie/Beslist.html">Beslist</a></li><li class=''><a href="../Configuratie/Module.html">Module</a></li></ul></li><li class=' has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Tests</a><ul class='nav nav-list'><li class=''><a href="../Tests/Orders.html">Orders</a></li><li class=''><a href="../Tests/Producten.html">Producten</a></li></ul></li><li class=' has-children'><a href="#" class="aj-nav folder"><i class="arrow">&nbsp;</i>Gebruik</a><ul class='nav nav-list'><li class=''><a href="../Gebruik/Orders.html">Orders</a></li><li class=''><a href="../Gebruik/Producten.html">Producten</a></li></ul></li></ul>
+
+                <div class="sidebar-links">
+                    
+                        <!-- Links -->
+                        <a href="http://addons.prestashop.com/en/22376-bolcom-plaza-api-connector.html" target="_blank">Aanschaffen</a><br><a href="https://addons.prestashop.com/en/customer-products.php" target="_blank">Download</a><br><a href="https://addons.prestashop.com/en/customer-support.php" target="_blank">Support/Bugs</a><br>
+                        <div id="toggleCodeBlock">
+                                                </div>
+
+                        <!-- Twitter -->
+                                                    <div class="twitter">
+                                <hr/>
+                                <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=mwienk&amp;show_count=false"></iframe>
+                            </div>
+                        
+                        <hr/>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right-column float-view content-area col-sm-9">
+
+            <div class="content-page">
+                
+                <div class="doc_content">
+                    <article>
+            <div class="page-header sub-header clearfix">
+            <h1><a href="../Configuratie/Beslist.html">Configuratie</a> <i class="glyphicon glyphicon-chevron-right"></i> <a href="../Configuratie/Beslist.html">Beslist</a></h1>
+            <span style="float: left; font-size: 10px; color: gray;">
+                Monday, July 11, 2016            </span>
+            <span style="float: right; font-size: 10px; color: gray;">
+                10:15 AM            </span>
+        </div>
+    
+    <p>De Beslist.nl configuratie moet ingesteld worden op uw <a href="https://cl.beslist.nl/v2/user/login">Beslist.nl account</a></p>
+<h2 id="page_Winkelwagen_instellingen">Winkelwagen instellingen</h2>
+<p>De module ondersteunt 1 manier van verzendkosten berekenen, namelijk de optie 'De bestelkosten worden berekend op basis van de totaalomzet van de bestelling(en).'.
+Stel dit dus als optie in op Beslist.nl (voor zowel België als Nederland). Dit doet u op de pagina <code>Winkelwagen</code> -&gt; <code>Instellingen</code>. Zorg ervoor dat de specificatie overeenkomt met de berekening van de verzendkosten binnen uw Prestashop installatie. U kunt ervoor kiezen om een nieuwe vervoerder aan te maken, waarbij de instellingen exact overeenkomen met de instellingen op Beslist.</p>
+<h2 id="page_Productfeed">Productfeed</h2>
+<p>De productfeed kunt u op de volgende locatie vinden:</p>
+<blockquote>
+<p>http://www.uwdomeinnaam.nl/modules/beslistcart/feed.php</p>
+</blockquote>
+<p>De productfeed functionaliteit is echter beperkt, indien u meer controle wenst over uw productfeed kunt u een abonnement op <a href="https://www.koongo.com/">Koongo</a> nemen.</p>
+<h3 id="page_API_sleutels">API sleutels</h3>
+<p>De module gebruikt meerdere Beslist API's. Namelijk:</p>
+<ol>
+<li>Order API</li>
+<li>Shopitem API</li>
+</ol>
+<p>Hiervoor is het nodig om API sleutels te verkijgen. Deze krijgt u van Beslist aangeleverd via e-mail.</p>
+<h3 id="page_Test_API">Test API</h3>
+<p>In eerste instantie wordt er een sleutel aangeleverd voor de testomgeving van de Shopitem API. De Order API gebruikt altijd de productieomgeving, maar kan op een andere manier getest worden.</p>
+<p>Nadat u een aantal succesvolle Shopitem API meldingen hebt gedaan, kunt u een productie API sleutel ontvangen van Beslist.</p>
+<p>Let op: de module kan alleen in zijn geheel in testmodus gezet worden, indien u de Order API al wilt gebruiken, houdt er dan rekening mee dat de Shopitem API niets doet.</p>
+
+        <nav>
+        <ul class="pager">
+            <li><a href="../Getting_Started.html">Previous</a></li>            <li><a href="../Configuratie/Module.html">Next</a></li>        </ul>
+    </nav>
+    </article>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36118513-4', '');
+    ga('send', 'pageview');
+</script>
+
+    <!-- jQuery -->
+    <script src="../themes/daux/js/jquery-1.11.3.min.js"></script>
+
+    <!-- hightlight.js -->
+    <script src="../themes/daux/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- JS -->
+    
+    <script src="../themes/daux/js/daux.js"></script>
+
+    
+</body>
+</html>
